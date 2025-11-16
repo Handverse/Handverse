@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handverse</title>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+
+  <script src="../js/firebase.js"></script>
+  <script src="../js/auth.js" defer></script>
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/home.css">
+</head>
+  
+<body>
+
+  <header class="main-header">
+    <div class="left-section">
+      <p id="aproveitamento">Aproveitamento: 0%</p>
+    </div>
+    <img src="../assets/images/logoWhite1.png" alt="Logo do site" class="header-image">
+    <a class="loja-button" href="https://handverse.lojavirtualnuvem.com.br/" alt="Loja">Loja</a>
+    <button class="exit-button" onclick="signOut()">Sair</button>
+  </header>
+
+  <main>
+    <div class="background-box">
+      <div>
+        <img class="imgregra" src="../assets/modulos/regras.jpeg" alt="Regras de convivência do site" />
+      </div>
+      <div class="text-container">
+        <p>Bem-vindo(a)! Aqui é um espaço para aprender Libras, conhecer pessoas e se divertir! Nosso objetivo é criar
+          um ambiente leve e inclusivo, onde todos possam se expressar com respeito e amizade. 💙</p>
+      </div>
+      <div class="rules">
+        <h2>🎉 Como tornar a experiência incrível?</h2>
+        <ul>
+          <li>✨ <strong>Seja gentil</strong> – Um simples sorriso ou gesto pode fazer o dia de alguém melhor!</li>
+          <li>💬 <strong>Converse e faça amizades</strong> – Aqui, cada conversa é uma oportunidade para aprender e se
+            conectar.</li>
+          <li>🚀 <strong>Compartilhe conhecimento</strong> – Ajude quem está aprendendo e troque experiências!</li>
+          <li>📹 <strong>Aproveite as videochamadas</strong> – Participe dos encontros e divirta-se praticando Libras.
+          </li>
+          <li>🎭 <strong>Expresse-se com respeito</strong> – Todos têm espaço para falar, desde que seja de forma
+            inclusiva e amigável.</li>
+          <li>🔒 <strong>Cuide da sua privacidade</strong> – Evite compartilhar informações pessoais em público.</li>
+          <li>✨ <strong>Divirta-se!</strong> – Este espaço é para você! Sinta-se à vontade para explorar e interagir. 😊
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="image-links">
+      <a href="../API WebCam/chamada.html">
+        <img src="../assets/modulos/menina_libras_chamada.png" alt="video chamada">
+      </a>
+      <a href="./modulo.html">
+        <img src="../assets/modulos/menino_libras_modulo.png" alt="módulo de curso">
+      </a>
+    </div>
+  </footer>
+
+  <footer class="footer">
+    &copy; 2025 Handverse. Todos os direitos reservados.
+  </footer>
+
+  <!-- VLibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+<script>
+  firebase.auth().onAuthStateChanged(user => {
+    const elemento = document.getElementById("aproveitamento");
+
+    if (!user) {
+      elemento.textContent = "Aproveitamento: 0%";
+      return;
+    }
+
+    const userEmail = user.email;
+    const ref = firebase.database().ref("questionsXusers");
+
+    // 🔹 Escuta apenas registros do usuário logado
+    ref.orderByChild("user").equalTo(userEmail).on("value", snapshot => {
+      const dados = snapshot.val();
+      console.log("Dados do usuário:", dados);
+
+      if (!dados) {
+        elemento.textContent = "Aproveitamento: 0%";
+        return;
+      }
+
+      // 🔹 Guarda o último registro por pergunta
+      const ultimosPorPergunta = {}; // { questionId: { key, utilization } }
+
+      for (let key in dados) {
+        const registro = dados[key];
+        if (!registro || !registro.question) continue;
+
+        const q = registro.question;
+        const util = Number(registro.utilization) || 0;
+
+        // Se não há ainda essa pergunta, ou este registro é mais recente (key maior)
+        if (!ultimosPorPergunta[q] || key > ultimosPorPergunta[q].key) {
+          ultimosPorPergunta[q] = { key, utilization: util };
+        }
+      }
+
+      // 🔹 Calcula média apenas das últimas tentativas
+      const valores = Object.values(ultimosPorPergunta).map(x => x.utilization);
+      const totalPerguntas = valores.length;
+
+      const aproveitamento = totalPerguntas > 0
+        ? valores.reduce((s, v) => s + v, 0) / totalPerguntas
+        : 0;
+
+      elemento.textContent = `Aproveitamento: ${aproveitamento.toFixed(0)}%`;
+
+      console.log("Últimos por pergunta:", ultimosPorPergunta);
+      console.log("Aproveitamento final:", aproveitamento);
+    }, error => {
+      console.error("Erro ao ler dados:", error);
+      elemento.textContent = "Aproveitamento: 0%";
+    });
+  });
+</script>
+
+<script src="../js/emailevoucher.js"></script>
+
+</body>
+</html>

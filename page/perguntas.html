@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perguntas</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/perguntas.css">
+
+  <script src="../js/firebase.js"></script>
+  <script src="../js/auth.js" type="module"></script>
+</head>
+
+
+<body>
+  <div id="utilizationTotal">Aproveitamento total: 0%</div>
+
+  <h2 style="text-align:center;">Questionário</h2>
+  <div id="quiz"></div>
+  <button id="submitBtn">Enviar Respostas</button>
+
+ <script type="module">
+    import {
+      initializeApp
+    } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import {
+      getDatabase,
+      ref,
+      get,
+      child,
+      push,
+      set,
+      query,
+      orderByChild,
+      equalTo,
+      onValue
+    } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+    import {
+      getAuth,
+      onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { 
+      getFunctions, 
+      httpsCallable 
+    } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-functions.js";
+    
+    const firebaseConfig = {
+      apiKey: "AIzaSyB550kjhLpnfoz3i4J-Cas190wAgtzjobY",
+      projectId: "handverse2024",
+      databaseURL: "https://handverse2024-default-rtdb.firebaseio.com", // precisa estar preenchido com a URL do seu Realtime Database
+    };
+
+    
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const auth = getAuth(app);
+
+    let usuarioAtual = null;
+
+    // --- Verifica se o usuário está logado ---
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        usuarioAtual = user.email;
+        console.log("Usuário logado:", usuarioAtual);
+        calcularUtilizationTotal(usuarioAtual);
+      } else {
+        alert("Você precisa estar logado para responder o questionário.");
+        window.location.href = "../page/login.html";
+      }
+    });
+
+    // --- Carrega uma pergunta específica ---
+    async function carregarPergunta(numero) {
+      const dbRef = ref(db);
+      try {
+        const snapshot = await get(child(dbRef, `questions/${numero}`));
+        if (snapshot.exists()) {
+          mostrarPergunta(snapshot.val(), numero);
+        } else {
+          console.log("Pergunta não encontrada:", numero);
+        }
+      } catch (error) {
+        console.error("Erro ao buscar pergunta:", error);
+      }
+    }
+
+    // --- Exibe a pergunta no HTML ---
+    function mostrarPergunta(p, numero) {
+      const container = document.getElementById("quiz");
+      const div = document.createElement("div");
+      div.dataset.numero = numero;
+
+      const h3 = document.createElement("h3");
+      h3.textContent = `${numero} - ${p.question}`;
+      div.appendChild(h3);
+
+      // imagem
+      const img = document.createElement("img");
+      img.src = `../assets/perguntas/${numero}.jpg`;
+      img.alt = "Imagem da pergunta";
+      img.style.maxWidth = "300px";
+      img.style.display = "block";
+      img.style.marginBottom = "10px";
+      div.appendChild(img);
+
+      // alternativas
+      const ul = document.createElement("ul");
+      p.alternatives.forEach((alt, altIndex) => {
+        const li = document.createElement("li");
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = `pergunta_${numero}`;
+        radio.value = altIndex;
+        radio.id = `pergunta_${numero}_alt_${altIndex}`;
+
+        const label = document.createElement("label");
+        label.htmlFor = radio.id;
+        label.textContent = alt;
+
+        li.appendChild(radio);
+        li.appendChild(label);
+        ul.appendChild(li);
+      });
+
+      div.appendChild(ul);
+      container.appendChild(div);
+    }
+
+    // --- Envio das respostas ---
+    document.getElementById("submitBtn").addEventListener("click", async () => {
+      if (!usuarioAtual) {
+        alert("Usuário não autenticado!");
+        return;
+      }
+
+      const dbRef = ref(db);
+      const perguntas = document.querySelectorAll("#quiz div");
+      let total = 0;
+      let acertos = 0;
+
+      for (const div of perguntas) {
+        const numero = div.dataset.numero;
+        const selecionado = [...div.querySelectorAll(`input[name=pergunta_${numero}]`)].find(r => r.checked);
+
+        if (!selecionado) {
+          div.classList.add("nao-respondida");
+          continue;
+        }
+
+        try {
+          const snap = await get(child(dbRef, `questions/${numero}`));
+          if (snap.exists()) {
+            const p = snap.val();
+            const correta = p.correct ?? p.correctAnswer;
+            const acertou = Number(selecionado.value) === Number(correta);
+
+            total++;
+            acertou ? (acertos++, div.classList.add("correto")) : div.classList.add("errado");
+
+            // Registro no banco
+            const agora = new Date();
+            const dataFormatada = `${String(agora.getDate()).padStart(2, "0")}-${String(agora.getMonth() + 1).padStart(2, "0")}-${agora.getFullYear()}`;
+            const utilization = acertou ? 100 : 0;
+
+            const novoRegistro = push(ref(db, "questionsXusers"));
+            await set(novoRegistro, {
+              user: usuarioAtual,
+              question: numero,
+              success: acertou,
+              attempts: 1,
+              date: dataFormatada,
+              utilization
+            });
+          }
+        } catch (err) {
+          console.error("Erro ao registrar resposta:", err);
+        }
+      }
+
+      // Resultado visual
+      const resultadoAntigo = document.getElementById("resultadoFinal");
+      if (resultadoAntigo) resultadoAntigo.remove();
+
+      const resultado = document.createElement("div");
+      resultado.id = "resultadoFinal";
+      resultado.textContent = `Você acertou ${acertos} de ${total} perguntas.`;
+      document.body.appendChild(resultado);
+
+      // Atualiza aproveitamento geral
+      await calcularUtilizationTotal(usuarioAtual);
+
+      // ✅ Redirecionamento instantâneo
+      window.location.href = "../page/home.html";
+    });
+
+    // --- Cálculo de aproveitamento total ---
+    async function calcularUtilizationTotal(email) {
+      const tentativasRef = ref(db, "questionsXusers");
+      const filtro = query(tentativasRef, orderByChild("user"), equalTo(email));
+
+      try {
+        const snapshot = await get(filtro);
+        if (!snapshot.exists()) {
+          document.getElementById("utilizationTotal").textContent = "Aproveitamento total: 0%";
+          return;
+        }
+
+        let soma = 0;
+        let total = 0;
+
+        snapshot.forEach(child => {
+          const u = Number(child.val().utilization);
+          if (!isNaN(u)) {
+            soma += u;
+            total++;
+          }
+        });
+
+        const media = total > 0 ? soma / total : 0;
+        const mediaArredondada = Math.round(media * 100) / 100;
+
+        document.getElementById("utilizationTotal").textContent =
+          `Aproveitamento total: ${mediaArredondada}%`;
+
+           if (mediaArredondada >= 70) {
+          fetch("https://handverse.infinityfree.me/gerar-cupom.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: user.email,
+              nome: user.displayName || "Aluno",
+              score: mediaArredondada
+            })
+          })
+          .then(r => r.json())
+          .then(d => console.log(d))
+          .catch(e => console.error(e));
+        }
+
+      } catch (e) {
+        console.error("Erro ao calcular utilization total:", e);
+      }
+
+      
+
+    }
+
+    // --- Lista de perguntas ---
+    const perguntasParaCarregar = [
+      "000001",
+      "000002",
+      "000003",
+      "000004",
+      "000005",
+      "000006",
+      "000007"
+    ];
+
+    perguntasParaCarregar.forEach(carregarPergunta);
+  </script>
+
+  
+
+</body>
+
+</html>
