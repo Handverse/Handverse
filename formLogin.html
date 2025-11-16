@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handverse</title>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js" type="module"></script>
+</head>
+
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/formLogin.css">
+
+<body>
+    <div class="container">
+        <div class="sectionLeft">
+            <a class="logo" href="index.html"><img class="logo" src="./assets/images/logoWhite1.png"
+                    alt="Logo HANDVERSE, duas mãos com órbita"></a>
+            <h1 class="leftTitleTxt">Faça parte da nossa comunidade de Libras <span class="hdv">Handverse</span></h1>
+            <img class="imgLeft" src="./assets/images/people.png" alt="Pessoas desenhadas com as mãos dadas">
+        </div>
+
+        <div class="sectionRight">
+            <div class="areaTxt">
+
+                <h1 class="rightTitleTxt">LOGIN</h1>
+                <p class="rightTxt">Preencha os campos requisitados e revise as informações antes de concluir o login.
+                </p>
+            </div>
+            <form id="authForm" class="rightForm">
+
+                <label id="email" for="email" class="lb">E-mail</label><br />
+                <input type="text" class="ip" id="email" name="email" required placeholder="Email"><br />
+
+                <label id="password" for="password" class="lb">Senha</label><br />
+                <input id="password" type="password" class="ip" required="true" minlength="8"
+                    placeholder="  Digite uma senha forte"><br />
+                <a class="rightTxtForgotPassword" href="">Esqueci minha senha</a><br />
+                <br>
+                <br>
+                <button class="rightBtnLogin" id="submitAuthForm" type="submit">Entrar</button>
+            </form>
+            <br><br>
+            <p class="register">Não possuo cadastro. Quero me <a class="rightBtnRegister" href="formCadastro.html">cadastrar!</a></p>
+        </div>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+      
+</body>
+
+</html>
