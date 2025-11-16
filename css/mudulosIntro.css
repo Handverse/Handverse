@@ -1,0 +1,123 @@
+@font-face {
+    font-family: fredoka;
+    src: url(../assets/fonts/FredokaOne-Regular.ttf);
+}
+@font-face {
+    font-family: codec pro;
+    src: url(../assets/fonts/Codec-Cold-Thin-trial.ttf);
+}
+@font-face {
+    font-family: codec;
+    src: url(../assets/fonts/Codec-Cold-ExtraBold-trial.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient( to right, #000, #05044d );
+    color: #333;
+  }
+
+  header {
+    background-image: linear-gradient(to right, #3533CD, #3282B8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-family: 'codec', sans-serif;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'codec', sans-serif;
+  }
+
+  .voltar {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: #0077b6;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration-line: none;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+
+  .container h2 {
+    font-size: 1.8rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+  }
+
+  .container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .btn-acessar {
+    display: inline-block;
+    background-image: linear-gradient(to right, #3533CD, #3282B8);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+
+  .btn-acessar:hover {
+    background-image: linear-gradient(to right, #3533CD, #3282B8);
+  }
+
+@media screen and (max-width: 500px) {
+    header {
+    background-image: linear-gradient(to right, #3533CD, #3282B8);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    font-family: 'codec', sans-serif;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'codec', sans-serif;
+  }
+
+  .container h2 {
+    font-size: 1.3rem;
+  }
+
+  .container p {
+    font-size: 0.9rem;
+  }
+
+  .btn-acessar {
+    font-size: 0.9rem;
+  }
+
+}

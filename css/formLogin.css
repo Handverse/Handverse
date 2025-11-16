@@ -1,0 +1,446 @@
+@font-face {
+    font-family: fredoka;
+    src: url(../assets/fonts/FredokaOne-Regular.ttf);
+}
+@font-face {
+    font-family: codec pro;
+    src: url(../assets/fonts/Codec-Cold-Thin-trial.ttf);
+}
+@font-face {
+    font-family: codec;
+    src: url(../assets/fonts/Codec-Cold-ExtraBold-trial.ttf);
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.sectionLeft{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient( to right, #000, #010038 );
+    width: 50%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.logo{
+    display: flex;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+.leftTitleTxt{
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: codec;
+    margin-bottom: 7%;
+}
+.hdv{
+    color: #4180ED;
+
+}
+.imgLeft{
+    height: auto;
+    width: 99%;
+}
+
+.sectionRight{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 50%;
+    justify-items: center;
+    align-items: center;
+
+}
+.areaTxt{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-items: center;
+    align-items: center;
+}
+.rightTitleTxt{
+    font-family: codec;
+    margin-top: 10%;
+    font-size: 2rem ;
+    color: #010038;
+}
+.rightTxt{
+    margin-top: 4%;
+    font-family: codec;
+    font-size: 0.9rem;
+}
+.rightForm{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    height: 30%;
+    font-size: 1.1rem ;
+    width: 70%;
+}
+.lb{
+
+    display: inherit;
+    margin-bottom: -2%;
+    font-family: fredoka ;
+}
+.ip{
+    width: 98%;
+    border: 2px solid #3282b8;
+    height: 10rem;
+    margin-bottom: 2%;
+    text-transform: lowercase;
+}
+.rightTxtForgotPassword{
+    display: inline-flex ;
+    font-family: codec;
+    font-style: italic;
+    justify-content: flex-end;
+    margin-top: -4%;
+    color: #000;
+    text-decoration: none;
+}
+.rightTxtBtn{
+    margin-top: 5%;
+}
+.rightBtnLogin{
+    background-color: #000;
+    font-family: codec;
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    padding: 2%;
+    padding-inline: 50%;
+    justify-content: center;
+
+    height: 50%;
+    width: 60%;
+    border-radius: 20rem;
+
+}
+.register{
+    margin-top: 10%;
+    font-family: codec;
+    font-style: italic;
+}
+
+input[type="submit"]:hover {
+    background-color: #4180ED;
+}
+
+@media screen and (min-width: 0px) {
+
+    .logo {
+        width: 70%;
+        height: auto;
+    }
+    .leftTitleTxt{
+        display: none;
+    }
+    
+}
+@media screen and (min-width: 100px) {
+    .container{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 60%;
+        height: 100vh;
+        width: 100%;
+    }
+    .sectionLeft{
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient( to right, #000, #010038 );
+        width: 100%;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+    .logo{
+        width: 70%;
+        height: auto;
+    }
+    .leftTitleTxt{
+        display: none;
+        color: #fff;
+        font-family: codec ;
+        font-size: 12px;
+    }
+    .leftTitleTxt{
+        color: #fff;
+        font-size: 0.8rem;
+        font-family: codec ;
+        text-align: center;
+    }
+    .imgLeft{
+        height: auto;
+        width: 50%;
+    }
+    .sectionRight{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+    }
+    .rightTitleTxt{
+        font-family: codec;
+        margin-top: 5%;
+        font-size: 1.2rem ;
+    }
+    .rightTxt{
+        margin-top: 2%;
+        font-family: codec;
+        font-size: 0.8rem;
+    }
+    .rightForm{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        height: 55%;
+        font-size: 1.1rem ;
+        width: 68%;
+    }
+    .register{
+
+        margin-top: 37%;
+    }
+}
+@media screen and (min-width: 425px) {
+    
+    .logo {
+        width: 70%;
+        height: auto;
+    }
+    .leftTitleTxt{
+        display: none;
+    }
+    .imgLeft{
+        height: auto;
+        width: 34%;
+    }
+    .register {
+        margin-top: 31%;
+    }
+}
+@media screen and (min-width: 611px) {
+    
+    .leftTitleTxt{
+        display: none;
+    }
+    .logo {
+        width: 70%;
+        height: auto;
+    }
+    .imgLeft {
+        height: auto;
+        width: 26%;
+    }
+    .register {
+        margin-top: 21%;
+    }
+
+
+}
+@media screen and (min-width: 768px) {
+
+    .sectionLeft {
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient( to right, #000, #010038 );
+        width: auto;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .logo{
+        width: 60%;
+        height: auto;
+    }
+
+    .leftTitleTxt{
+        display: none;
+        color: #fff;
+        font-family: codec ;
+        font-size: 12px;
+    }
+    .leftTitleTxt{
+        color: #fff;
+        font-family: codec ;
+        text-align: center;
+    }
+    .imgLeft{
+        height: auto;
+        width: 21%;
+    }
+    .register {
+        margin-top: 17%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .container{
+        display: flex;
+        height: 100vh;
+        width: 100%;
+    }
+    .sectionLeft{
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient( to right, #000, #010038 );
+        width: 50%;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+    .logo{
+        width: 70%;
+    }
+    .leftTitleTxt{
+        display: initial;
+        color: #fff;
+        font-size: 1.2rem;
+        font-family: codec ;
+    }
+    .hdv{
+        color: #4180ED;
+    
+    }
+    .imgLeft{
+        height: auto;
+        width: 99%;
+    }
+    
+    .sectionRight{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 50%;
+        justify-items: center;
+        align-items: center;
+    
+    }
+    .areaTxt{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-items: center;
+        align-items: center;
+    }
+    .rightTitleTxt{
+        font-family: codec;
+        margin-top: 10%;
+        font-size: 2rem ;
+    }
+    .rightTxt{
+        margin-top: 4%;
+        font-family: codec;
+        font-size: 0.9rem;
+    }
+    .rightForm{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        height: 30%;
+        font-size: 1.1rem ;
+        width: 70%;
+    }
+    .lb{
+    
+        display: inherit;
+        margin-bottom: -2%;
+        font-family: fredoka ;
+    }
+    .ip{
+        width: 98%;
+        border: 2px solid #4180ED;
+        height: 10rem;
+        margin-bottom: 2%;
+    }
+    .rightTxtForgotPassword{
+        display: inline-flex ;
+        justify-content: flex-end;
+        color: #000;
+    }
+    .rightTxtBtn{
+        margin-top: 5%;
+    }
+    .rightBtnLogin{
+        background-color: #000;
+        color: #fff;
+        height: 50%;
+        width: 60%;
+        border-radius: 10rem;
+        display: inline-flex;
+        align-self: center;
+        justify-content: center;
+    }
+    .register{
+        margin-top: 10%;
+    }
+    
+}
+@media screen and (min-width: 2560px) {
+    .leftTitleTxt {
+        display: initial;
+        color: #fff;
+        font-family: codec;
+        font-size: 2rem;
+    }
+    .imgLeft {
+        height: auto;
+        width: 70%;
+    }
+    .rightTitleTxt {
+        font-family: codec;
+        margin-top: 10%;
+        font-size: 4rem;
+    }
+    .rightTxt {
+        margin-top: 4%;
+        font-family: codec;
+        font-size: 2.5rem;
+    }
+    .lb {
+        display: inherit;
+        margin-bottom: -2%;
+        font-family: fredoka;
+        font-size: 2rem;
+    }
+    .ip {
+        width: 98%;
+        border: 2px solid #3282b8;
+        height: 9rem;
+        margin-bottom: 6%;
+        font-size: 1.5rem;
+    }
+    .rightTxtForgotPassword {
+        display: inline-flex;
+        justify-content: flex-end;
+        color: #000;
+        font-size: 2rem;
+    }
+    .rightBtnLogin {
+        background-color: #000;
+        color: #fff;
+        height: 43%;
+        width: 60%;
+        border-radius: 10rem;
+        display: inline-flex;
+        align-self: center;
+        justify-content: center;
+        font-size: 2rem;
+    }
+    .register {
+        margin-top: 10%;
+        font-size: 1.9rem;
+    }
+}

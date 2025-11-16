@@ -1,0 +1,27 @@
+@font-face {
+    font-family: fredoka;
+    src: url(../assets/fonts/FredokaOne-Regular.ttf);
+}
+@font-face {
+    font-family: codec pro;
+    src: url(../assets/fonts/Codec-Cold-Thin-trial.ttf);
+}
+
+
+
+.cabec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 5vh;
+    margin-top: 2%;
+    margin-left: 89%;
+    margin-bottom: 5%;
+    font-family: 'fredoka', sans-serif;
+    background-color: #ffffff;
+    font-size: 1.6rem;
+    color: #4180ED;
+    border-radius: 3rem;
+    border: 2px solid #4180ED;
+}

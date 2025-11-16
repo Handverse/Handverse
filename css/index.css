@@ -1,0 +1,1970 @@
+@font-face {
+    font-family: fredoka;
+    src: url(../assets/fonts/FredokaOne-Regular.ttf);
+}
+@font-face {
+    font-family: codec pro;
+    src: url(../assets/fonts/Codec-Cold-Thin-trial.ttf);
+}
+@font-face {
+    font-family: codec;
+    src: url(../assets/fonts/Codec-Cold-ExtraBold-trial.ttf);
+}
+
+@keyframes animacaoLogo{
+    from {opacity: 0%; margin-top: 24%;}
+    to {opacity: 100%; margin-top: 20%;}
+}
+@keyframes animacaoIntro{
+    from {opacity: 0%; margin-top: 19%;}
+    to {opacity: 100%; margin-top: 15%;}
+}
+@keyframes animacaoBotao1{
+    from {opacity: 0%; margin-top: 21%;}
+    to {opacity: 100%; margin-top: 17%;}
+}
+@keyframes animacaoBotao2{
+    from {opacity: 0%; margin-top: 7%;}
+    to {opacity: 100%; margin-top: 3%;}
+}
+@keyframes animacaoBotao3{
+    from {opacity: 0%; margin-top: 4%;}
+    to {opacity: 100%; margin-top: 0%;}
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 100%;
+}
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: 85vh;
+    width: 100%;
+}
+
+.container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.container3{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    height: 100vh;
+    width: 100%;
+}
+
+.nomeAzul{
+    color: #4180ED;
+}
+
+.fundo{
+    background-image: linear-gradient( to right, #000, #05044d );
+}
+
+.logo{
+    width: 75%;
+    height: auto;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: animacaoLogo;
+    animation-duration: 3s;
+}
+
+.logo1{
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro{
+    width: 90%;
+    height: auto;
+    margin-top: 15%;
+    animation-name: animacaoIntro;
+    animation-duration: 3s;
+}
+
+.intro1{
+    width: 65%;
+    height: auto;
+    border-radius: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro2{
+    width: 65%;
+    height: auto;
+    border-radius: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro3{
+    width: 55%;
+    height: auto;
+    border-radius: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.botaoLogin{
+    width: 40%;
+    margin-top: 17%;
+    margin-left: 16%;
+    text-align: center;
+    text-decoration: none;
+    font-family: codec;
+    border-radius: 2rem;
+    font-size: 1.7rem;
+    padding: 2%;
+    padding-inline: 4%;
+    color: #ffffff;
+    background-image: linear-gradient( to right,  #3533CD, #3282B8 );
+    animation-name: animacaoBotao1;
+    animation-duration: 3s
+}
+
+.botaoLogin:hover{
+    transform: scale(1.08);
+}
+
+.botaoCadastre{
+    width: 40%;
+    margin-top: 3%;
+    margin-left: 16%;
+    text-align: center;
+    text-decoration: none;
+    font-family: codec;
+    border-radius: 2rem;
+    font-size: 1.7rem;
+    padding: 2%;
+    padding-inline: 4%;
+    color: #ffffff;
+    background-image: linear-gradient( to right,  #3533CD, #3282B8 );
+    animation-name: animacaoBotao2;
+    animation-duration: 3s
+}
+
+.botaoCadastre:hover{
+  transform: scale(1.08);
+}
+
+.botaoSemCadastro{
+    width: 40%;
+    font-style: italic;
+    margin-top: 0%;
+    margin-left: 16%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: codec pro;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    padding: 2%;
+    padding-inline: 4%;
+    color: #ffffff;
+    animation-name: animacaoBotao3;
+    animation-duration: 3s
+}
+
+.botaoSemCadastro:hover{
+    transform: scale(1.08);
+}
+
+.sec1{
+    padding-bottom: 10%;
+}
+
+.sec2{
+    padding-bottom: 15%;
+}
+
+.justificativa{
+    display: inline-block;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ti1{
+    color: white;
+    font-size: 4.5rem;
+    font-family: codec;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.ti2{
+    width: 80%;
+    color: white;
+    font-size: 1.8rem;
+    font-family: codec;
+    line-height: 135%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.ti3{
+    width: 70%;
+    color: #4180ED;
+    font-size: 4rem;
+    text-align: left;
+    font-family: codec;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ti4{
+    width: 70%;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: left;
+    font-family: codec;
+    line-height: 125%;
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ti5{
+    width: 70%;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: codec;
+    line-height: 125%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ti6{
+    color: #4180ED;
+    font-size: 4rem;
+    text-align: center;
+    font-family: codec;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ti7{
+    width: 70%;
+    color: #ffffff;
+    font-size: 1.4rem;
+    text-align: left;
+    font-family: codec;
+    line-height: 125%;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ti8{
+    width: 70%;
+    color: #ffffff;
+    font-size: 1.4rem;
+    text-align: left;
+    font-family: codec;
+    line-height: 125%;
+    margin-top: 16%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ti9{
+    width: 70%;
+    color: #4180ED;
+    font-size: 3.7rem;
+    text-align: left;
+    font-family: codec;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ti10{
+    width: 70%;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-family: codec;
+    line-height: 125%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ti11{
+    width: 70%;
+    color: #ffffff;
+    font-size: 1.5rem;
+    line-height: 125%;
+    font-family: codec;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ti12{
+    color: #4180ED;
+    font-size: 5rem;
+    text-align: left;
+    font-family: codec;
+}
+
+.ti13{
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    line-height: 150%;
+    margin-top: 2%;
+}
+
+@media screen and (max-width: 1600px){
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+        width: 100%;
+    }
+    
+    .container1{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        height: 85vh;
+        width: 100%;
+    }
+    
+    .container2{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin-top: 5%;
+        width: 100%;
+    }
+    
+    .container3{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .nomeAzul{
+        color: #4180ED;
+    }
+    
+    .fundo{
+        background-image: linear-gradient( to right, #000, #05044d );
+    }
+    
+    .logo1{
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .intro1{
+        width: 65%;
+        height: auto;
+        border-radius: 2rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .intro2{
+        width: 65%;
+        height: auto;
+        border-radius: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .intro3{
+        width: 55%;
+        height: auto;
+        border-radius: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .sec1{
+        padding-bottom: 10%;
+    }
+    
+    .sec2{
+        padding-bottom: 15%;
+    }
+    
+    .justificativa{
+        display: inline-block;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti1{
+        color: white;
+        font-size: 4.5rem;
+        font-family: codec;
+        margin-top: 15%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .ti2{
+        width: 80%;
+        color: white;
+        font-size: 1.8rem;
+        font-family: codec;
+        line-height: 135%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .ti3{
+        color: #4180ED;
+        font-size: 3.2rem;
+        text-align: left;
+        font-family: codec;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti4{
+        width: 70%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        text-align: left;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti5{
+        width: 70%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti6{
+        color: #4180ED;
+        font-size: 3.5rem;
+        text-align: center;
+        font-family: codec;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti7{
+        width: 70%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        text-align: left;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti8{
+        width: 70%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        text-align: left;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti9{
+        width: 70%;
+        color: #4180ED;
+        font-size: 3.5rem;
+        text-align: left;
+        font-family: codec;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti10{
+        width: 70%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti11{
+        width: 70%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        line-height: 125%;
+        font-family: codec;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti12{
+        color: #4180ED;
+        font-size: 3.5rem;
+        text-align: left;
+        font-family: codec;
+    }
+    
+    .ti13{
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        line-height: 150%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+        width: 100%;
+    }
+    
+    .container1{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        height: 85vh;
+        width: 100%;
+    }
+    
+    .container2{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin-top: 5%;
+        width: 100%;
+    }
+    
+    .container3{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .nomeAzul{
+        color: #4180ED;
+    }
+    
+    .fundo{
+        background-image: linear-gradient( to right, #000, #05044d );
+    }
+    
+    .logo1{
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .intro1{
+        width: 65%;
+        height: auto;
+        border-radius: 2rem;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .intro2{
+        width: 65%;
+        height: auto;
+        border-radius: 2rem;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .intro3{
+        width: 70%;
+        height: auto;
+        border-radius: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .sec1{
+        padding-bottom: 10%;
+    }
+    
+    .sec2{
+        padding-bottom: 15%;
+    }
+    
+    .justificativa{
+        display: inline-block;
+        align-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti1{
+        color: white;
+        font-size: 4rem;
+        font-family: codec;
+        margin-top: 15%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .ti2{
+        width: 80%;
+        color: white;
+        font-size: 1.8rem;
+        font-family: codec;
+        line-height: 135%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .ti3{
+        width: 90%;
+        color: #4180ED;
+        font-size: 3.2rem;
+        text-align: left;
+        font-family: codec;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti4{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        text-align: left;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti5{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti6{
+        color: #4180ED;
+        font-size: 3rem;
+        text-align: center;
+        font-family: codec;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti7{
+        width: 85%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        text-align: left;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti8{
+        width: 85%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        text-align: left;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti9{
+        width: 70%;
+        color: #4180ED;
+        font-size: 4rem;
+        text-align: left;
+        font-family: codec;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti10{
+        width: 70%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti11{
+        width: 70%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        line-height: 125%;
+        font-family: codec;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti12{
+        color: #4180ED;
+        font-size: 3rem;
+        text-align: left;
+        font-family: codec;
+    }
+    
+    .ti13{
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        line-height: 150%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width: 1020px){
+
+    @keyframes animacaoLogo{
+        from {opacity: 0%; margin-top: 14%;}
+        to {opacity: 100%; margin-top: 10%;}
+    }
+    @keyframes animacaoBotao1{
+        from {opacity: 0%; margin-top: 24%;}
+        to {opacity: 100%; margin-top: 20%;}
+    }
+    @keyframes animacaoBotao2{
+        from {opacity: 0%; margin-top: 9%;}
+        to {opacity: 100%; margin-top: 5%;}
+    }
+    @keyframes animacaoBotao3{
+        from {opacity: 0%; margin-top: 6%;}
+        to {opacity: 100%; margin-top: 2%;}
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container1{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container2{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container3{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .intro{
+        width: 0%;
+        height: auto;
+        margin-top: -25%;
+        margin-left: auto;
+        margin-right: auto;
+        animation-name: animacaoIntro;
+        animation-duration: 3s;
+    }
+
+    .intro1{
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro2{
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro3{
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-top: 15%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo{
+        width: 75%;
+        height: auto;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        animation-name: animacaoLogo;
+        animation-duration: 3s;
+    }
+
+    .logo1{
+        width: 0%;
+        height: auto;
+        margin-top: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25%;
+    }
+
+    .botaoLogin{
+        width: 60%;
+        margin-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: codec;
+        border-radius: 2rem;
+        font-size: 1.7rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        background-image: linear-gradient( to right,  #3533CD, #3282B8 );
+        animation-name: animacaoBotao1;
+        animation-duration: 3s
+    }
+
+    .botaoCadastre{
+        width: 60%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: codec;
+        border-radius: 2rem;
+        font-size: 1.7rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        background-image: linear-gradient( to right,  #3533CD, #3282B8 );
+        animation-name: animacaoBotao2;
+        animation-duration: 3s
+    }
+    
+    .botaoSemCadastro{
+        width: 60%;
+        font-style: italic;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-family: codec pro;
+        border-radius: 2rem;
+        font-size: 1.2rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        animation-name: animacaoBotao3;
+        animation-duration: 3s
+    }
+
+    .ti1{
+        color: white;
+        font-size: 3em;
+        font-family: codec;
+        margin-top: 30%;
+        text-align: center;
+    }
+    
+    .ti2{
+        width: 90%;
+        color: white;
+        font-size: 1.8rem;
+        font-family: codec;
+        line-height: 120%;
+        margin-top: 20%;
+        text-align: justify;
+    }
+
+    .ti3{
+        color: #4180ED;
+        font-size: 4rem;
+        text-align: left;
+        font-family: codec;
+        margin-top: 20%;
+        margin-left: 5%;
+    }
+    
+    .ti4{
+        width: 90%;
+        color: #ffffff;
+        font-size: 2rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+    }
+    
+    .ti5{
+        width: 90%;
+        color: #ffffff;
+        font-size: 2rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .ti6{
+        color: #4180ED;
+        font-size: 4rem;
+        text-align: center;
+        font-family: codec;
+        margin-top: 35%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti7{
+        width: 90%;
+        color: #ffffff;
+        font-size: 2rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti8{
+        width: 90%;
+        color: #ffffff;
+        font-size: 2rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ti9{
+        color: #4180ED;
+        font-size: 4rem;
+        text-align: left;
+        font-family: codec;
+        margin-top: 55%;
+        margin-left: 6%;
+    }
+    
+    .ti10{
+        width: 90%;
+        color: #ffffff;
+        font-size: 2rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+        margin-left: 6%;
+    }
+    
+    .ti11{
+        width: 90%;
+        color: #ffffff;
+        font-size: 2rem;
+        line-height: 125%;
+        font-family: codec;
+        margin-top: 5%;
+        margin-left: 6%;
+    }
+
+    .ti12{
+        width: 90%;
+        color: #4180ED;
+        font-size: 4rem;
+        text-align: center;
+        font-family: codec;
+        margin-top: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti13{
+        width: 80%;
+        color: #ffffff;
+        font-size: 2rem;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        line-height: 150%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (max-width: 760px){
+
+    @keyframes animacaoLogo{
+        from {opacity: 0%; margin-top: 14%;}
+        to {opacity: 100%; margin-top: 10%;}
+    }
+    @keyframes animacaoIntro{
+        from {opacity: 0%; margin-top: -21%;}
+        to {opacity: 100%; margin-top: -25%;}
+    }
+    @keyframes animacaoBotao1{
+        from {opacity: 0%; margin-top: 4%;}
+        to {opacity: 100%; margin-top: 0%;}
+    }
+    @keyframes animacaoBotao2{
+        from {opacity: 0%; margin-top: 9%;}
+        to {opacity: 100%; margin-top: 5%;}
+    }
+    @keyframes animacaoBotao3{
+        from {opacity: 0%; margin-top: 6%;}
+        to {opacity: 100%; margin-top: 2%;}
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container1{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container2{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container3{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .intro{
+        width: 80%;
+        height: auto;
+        margin-top: -25%;
+        margin-left: auto;
+        margin-right: auto;
+        animation-name: animacaoIntro;
+        animation-duration: 3s;
+    }
+
+    .intro1{
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro2{
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro3{
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-top: 15%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo{
+        width: 75%;
+        height: auto;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        animation-name: animacaoLogo;
+        animation-duration: 3s;
+    }
+
+    .logo1{
+        width: 0%;
+        height: auto;
+        margin-top: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25%;
+    }
+
+    .botaoLogin{
+        width: 60%;
+        margin-top: 0%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: codec;
+        border-radius: 2rem;
+        font-size: 1.7rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        background-image: linear-gradient( to right,  #3533CD, #3282B8 );
+        animation-name: animacaoBotao1;
+        animation-duration: 3s
+    }
+
+    .botaoCadastre{
+        width: 60%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: codec;
+        border-radius: 2rem;
+        font-size: 1.7rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        background-image: linear-gradient( to right,  #3533CD, #3282B8 );
+        animation-name: animacaoBotao2;
+        animation-duration: 3s
+    }
+    
+    .botaoSemCadastro{
+        width: 60%;
+        font-style: italic;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-family: codec pro;
+        border-radius: 2rem;
+        font-size: 1.2rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        animation-name: animacaoBotao3;
+        animation-duration: 3s
+    }
+
+    .ti1{
+        color: white;
+        font-size: 3em;
+        font-family: codec;
+        margin-top: 50%;
+        text-align: center;
+    }
+    
+    .ti2{
+        width: 90%;
+        color: white;
+        font-size: 1.5rem;
+        font-family: codec;
+        line-height: 120%;
+        margin-top: 20%;
+        text-align: justify;
+    }
+
+    .ti3{
+        color: #4180ED;
+        font-size: 3rem;
+        text-align: left;
+        font-family: codec;
+        margin-top: 20%;
+        margin-left: 5%;
+    }
+    
+    .ti4{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+    }
+    
+    .ti5{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .ti6{
+        color: #4180ED;
+        font-size: 3rem;
+        text-align: center;
+        font-family: codec;
+        margin-top: 35%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti7{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti8{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ti9{
+        color: #4180ED;
+        font-size: 3rem;
+        text-align: left;
+        font-family: codec;
+        margin-top: 55%;
+        margin-left: 6%;
+    }
+    
+    .ti10{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+        margin-left: 6%;
+    }
+    
+    .ti11{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        line-height: 125%;
+        font-family: codec;
+        margin-top: 5%;
+        margin-left: 6%;
+    }
+
+    .ti12{
+        width: 90%;
+        color: #4180ED;
+        font-size: 3rem;
+        text-align: center;
+        font-family: codec;
+        margin-top: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti13{
+        width: 80%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        line-height: 150%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (max-width: 540px){
+
+    @keyframes animacaoLogo{
+        from {opacity: 0%; margin-top: 14%;}
+        to {opacity: 100%; margin-top: 10%;}
+    }
+    @keyframes animacaoIntro{
+        from {opacity: 0%; margin-top: -71%;}
+        to {opacity: 100%; margin-top: -75%;}
+    }
+    @keyframes animacaoBotao1{
+        from {opacity: 0%; margin-top: -26%;}
+        to {opacity: 100%; margin-top: -30%;}
+    }
+    @keyframes animacaoBotao2{
+        from {opacity: 0%; margin-top: 9%;}
+        to {opacity: 100%; margin-top: 5%;}
+    }
+    @keyframes animacaoBotao3{
+        from {opacity: 0%; margin-top: 6%;}
+        to {opacity: 100%; margin-top: 2%;}
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container1{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container2{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: left;
+        height: 60vh;
+        width: 100%;
+    }
+
+    .container3{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .intro{
+        width: 80%;
+        height: auto;
+        margin-top: -75%;
+        margin-left: auto;
+        margin-right: auto;
+        /*animation-name: animacaoIntro;
+        animation-duration: 3s;*/
+    }
+
+    .intro1{
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro2{
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-top: -15%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro3{
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-top: -30%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo{
+        width: 75%;
+        height: auto;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        animation-name: animacaoLogo;
+        animation-duration: 3s;
+    }
+
+    .logo1{
+        width: 50%;
+        height: auto;
+        margin-top: -5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .botaoLogin{
+        width: 60%;
+        margin-top: -30%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: codec;
+        border-radius: 2rem;
+        font-size: 1.7rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        background-image: linear-gradient( to right,  #3533CD, #3282B8 );
+        animation-name: animacaoBotao1;
+        animation-duration: 3s
+    }
+
+    .botaoCadastre{
+        width: 60%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: codec;
+        border-radius: 2rem;
+        font-size: 1.7rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        background-image: linear-gradient( to right,  #3533CD, #3282B8 );
+        animation-name: animacaoBotao2;
+        animation-duration: 3s
+    }
+    
+    .botaoSemCadastro{
+        width: 60%;
+        font-style: italic;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-family: codec pro;
+        border-radius: 2rem;
+        font-size: 1.2rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        animation-name: animacaoBotao3;
+        animation-duration: 3s
+    }
+
+    .ti1{
+        color: white;
+        font-size: 1.8rem;
+        font-family: codec;
+        margin-top: 20%;
+        text-align: center;
+    }
+    
+    .ti2{
+        width: 90%;
+        color: white;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 120%;
+        margin-top: 20%;
+        text-align: justify;
+    }
+
+    .sec2{
+        padding-bottom: 5%;
+    }
+
+    .ti3{
+        color: #4180ED;
+        font-size: 2rem;
+        text-align: left;
+        font-family: codec;
+        margin-top: 20%;
+        margin-left: 5%;
+    }
+    
+    .ti4{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+    }
+    
+    .ti5{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .ti6{
+        color: #4180ED;
+        font-size: 2rem;
+        text-align: center;
+        font-family: codec;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti7{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti8{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ti9{
+        color: #4180ED;
+        font-size: 2rem;
+        text-align: left;
+        font-family: codec;
+        margin-top: 2%;
+        margin-left: 6%;
+    }
+    
+    .ti10{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+        margin-left: 6%;
+    }
+    
+    .ti11{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 125%;
+        font-family: codec;
+        margin-top: 5%;
+        margin-left: 6%;
+    }
+
+    .ti12{
+        width: 90%;
+        color: #4180ED;
+        font-size: 2rem;
+        text-align: center;
+        font-family: codec;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti13{
+        width: 80%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        line-height: 150%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (max-width: 425px){
+
+    @keyframes animacaoLogo{
+        from {opacity: 0%; margin-top: 34%;}
+        to {opacity: 100%; margin-top: 30%;}
+    }
+    @keyframes animacaoBotao1{
+        from {opacity: 0%; margin-top: 29%;}
+        to {opacity: 100%; margin-top: 25%;}
+    }
+    @keyframes animacaoBotao2{
+        from {opacity: 0%; margin-top: 9%;}
+        to {opacity: 100%; margin-top: 5%;}
+    }
+    @keyframes animacaoBotao3{
+        from {opacity: 0%; margin-top: 6%;}
+        to {opacity: 100%; margin-top: 2%;}
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container1{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .container2{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        height: 50vh;
+        width: 100%;
+    }
+
+    .container3{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: left;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .intro{
+        display: none;
+    }
+
+    .intro1{
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro2{
+        width: 80%;
+        height: auto;
+        border-radius: 2rem;
+        margin-top: -15%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .intro3{
+        width: 75%;
+        height: auto;
+        border-radius: 2rem;
+        margin-top: -25%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo{
+        width: 75%;
+        height: auto;
+        margin-top: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        animation-name: animacaoLogo;
+        animation-duration: 3s;
+    }
+
+    .logo1{
+        width: 0%;
+        height: auto;
+        margin-top: -10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .botaoLogin{
+        width: 60%;
+        margin-top: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: codec;
+        border-radius: 2rem;
+        font-size: 1.7rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        background-image: linear-gradient( to right,  #3533CD, #3282B8 );
+        animation-name: animacaoBotao1;
+        animation-duration: 3s
+    }
+
+    .botaoCadastre{
+        width: 60%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: codec;
+        border-radius: 2rem;
+        font-size: 1.7rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        background-image: linear-gradient( to right,  #3533CD, #3282B8 );
+        animation-name: animacaoBotao2;
+        animation-duration: 3s
+    }
+    
+    .botaoSemCadastro{
+        width: 60%;
+        font-style: italic;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-family: codec pro;
+        border-radius: 2rem;
+        font-size: 1.2rem;
+        padding: 2%;
+        padding-inline: 4%;
+        color: #ffffff;
+        animation-name: animacaoBotao3;
+        animation-duration: 3s
+    }
+
+    .ti1{
+        color: white;
+        font-size: 1.5rem;
+        font-family: codec;
+        margin-top: 20%;
+        text-align: center;
+    }
+    
+    .ti2{
+        width: 90%;
+        color: white;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 120%;
+        margin-top: 20%;
+        text-align: justify;
+    }
+
+    .sec2{
+        padding-bottom: 5%;
+    }
+
+    .ti3{
+        color: #4180ED;
+        font-size: 2rem;
+        text-align: left;
+        font-family: codec;
+        margin-top: 20%;
+        margin-left: 5%;
+    }
+    
+    .ti4{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+    }
+    
+    .ti5{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .ti6{
+        color: #4180ED;
+        font-size: 2rem;
+        text-align: center;
+        font-family: codec;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti7{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti8{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ti9{
+        color: #4180ED;
+        font-size: 2rem;
+        text-align: left;
+        font-family: codec;
+        margin-top: 2%;
+        margin-left: 6%;
+    }
+    
+    .ti10{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: codec;
+        line-height: 125%;
+        margin-top: 7%;
+        margin-left: 6%;
+    }
+    
+    .ti11{
+        width: 90%;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 125%;
+        font-family: codec;
+        margin-top: 5%;
+        margin-left: 6%;
+    }
+
+    .ti12{
+        width: 90%;
+        color: #4180ED;
+        font-size: 2rem;
+        text-align: center;
+        font-family: codec;
+        margin-top: -35%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ti13{
+        width: 80%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        line-height: 150%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+.sec1, .ti1, .ti2, .ti3, .ti4, .ti5, .intro1,
+.intro2, .ti6, .ti7, .ti8, .intro3, .ti9, .ti10,
+.ti11, .ti12, .ti13, .logo1{
+    visibility: hidden;
+}
